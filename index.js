@@ -5,7 +5,7 @@ import paperModel from './model/paperModel.js';
 dotenv.config();
 
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT;
 const URL = process.env.URL;
 // Middleware
 app.use(express.json());
@@ -44,7 +44,7 @@ app.post('/paper', async (req, res) => {
 // Server
 app.listen(PORT, (err) => {
     try {
-        console.log('Connected to SERVER');
+        console.log(`Connected to ${PORT}`);
     } catch (error) {
         console.log(error);
     }
