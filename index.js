@@ -2,7 +2,7 @@ import express from 'express';
 import mongoose from 'mongoose';
 import dotenv from 'dotenv';
 import paperModel from './model/paperModel.js';
-
+import cors from 'cors';
 dotenv.config();
 
 const app = express();
@@ -10,7 +10,7 @@ const PORT = process.env.PORT || 3000;
 const URL = process.env.URL;
 
 app.use(express.json());
-
+app.use(cors());
 mongoose.connect(
     URL,
     { useNewUrlParser: true, useUnifiedTopology: true },
