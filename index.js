@@ -19,7 +19,7 @@ mongoose.connect(
     }
 );
 
-app.get('/', async (req, res) => {
+app.get('/papers', async (req, res) => {
     try {
         const paperDoc = await paperModel.find();
         res.status(200).json({ paperDoc });
