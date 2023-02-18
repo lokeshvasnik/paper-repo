@@ -5,7 +5,7 @@ import paperModel from './model/paperModel.js';
 dotenv.config();
 
 const app = express();
-const PORT = process.env.PORT;
+const PORT = process.env.PORT || 3000;
 const URL = process.env.URL;
 // Middleware
 app.use(express.json());
